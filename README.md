@@ -115,8 +115,6 @@ docker pull adminer:4
 
 ## Conclusion
 
-Here is the table with no heading and without the "Parameter" and "Value" labels:
-
 ---
 
 |                          |                                                               |

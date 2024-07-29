@@ -2,14 +2,14 @@
 
 ## Summary of Issues
 
-This report documents for the errors encountered during the installation  frappe manager on the system.
+This report documents the errors encountered during the installation and setup of various software packages on the system.
 
 ## Error Details
 
-### 1. **Unable to Locate Package `code`**
+### 1. **Unable to Locate Package code**
 
 **Command:**
-```bash
+```
 sudo apt install code
 ```
 
@@ -22,20 +22,20 @@ E: Unable to locate package code
 ```
 
 **Solution:**
-- Ensure the repository is added correctly for code. code refers to Visual Studio Code, which can be added via the Microsoft repository:
-  ```bash
-  sudo apt update
-  sudo apt install software-properties-common apt-transport-https wget
-  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-  sudo apt update
-  sudo apt install code
-  ```
+Ensure the repository is added correctly for code. code refers to Visual Studio Code, which can be added via the Microsoft repository:
+```
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+```
 
 ### 2. **Error: Externally Managed Environment**
 
 **Command:**
-```bash
+```
 pip3 install frappe-manager
 ```
 
@@ -64,17 +64,17 @@ hint: See PEP 668 for the detailed specification.
 ```
 
 **Solution:**
-- Use a virtual environment:
-  ```bash
-  python3 -m venv vman
-  source vman/bin/activate
-  pip install frappe-manager
-  ```
+Use a virtual environment:
+```
+python3 -m venv vman
+source vman/bin/activate
+pip install frappe-manager
+```
 
 ### 3. **Docker Daemon Not Running**
 
 **Command:**
-```bash
+```
 fm create project.pankaj
 ```
 
@@ -85,11 +85,11 @@ fm create project.pankaj
 ```
 
 **Solution:**
-- Start the Docker service:
-  ```bash
-  sudo systemctl start docker
-  sudo systemctl enable docker
-  ```
+Start the Docker service:
+```
+sudo systemctl start docker
+sudo systemctl enable docker
+```
 
 ### 4. **Docker Images Not Available Locally**
 
@@ -104,11 +104,11 @@ fm create project.pankaj
 ```
 
 **Solution:**
-- Manually pull the required Docker images:
-  ```bash
-  docker pull ghcr.io/rtcamp/frappe-manager-frappe:v0.15.0
-  docker pull ghcr.io/rtcamp/frappe-manager-nginx:v0.15.0
-  docker pull redis:6.2-alpine
-  docker pull ghcr.io/rtcamp/frappe-manager-mailhog:v0.8.3
-  docker pull adminer:4
-  ```
+Manually pull the required Docker images:
+```
+docker pull ghcr.io/rtcamp/frappe-manager-frappe:v0.15.0
+docker pull ghcr.io/rtcamp/frappe-manager-nginx:v0.15.0
+docker pull redis:6.2-alpine
+docker pull ghcr.io/rtcamp/frappe-manager-mailhog:v0.8.3
+docker pull adminer:4
+```

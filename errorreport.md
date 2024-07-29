@@ -75,7 +75,7 @@ pip install frappe-manager
 
 **Command:**
 ```
-fm create project.pankaj
+fm create projectofpankaj
 ```
 
 **Output:**
@@ -112,3 +112,46 @@ docker pull redis:6.2-alpine
 docker pull ghcr.io/rtcamp/frappe-manager-mailhog:v0.8.3
 docker pull adminer:4
 ```
+# final output 
+
+``` fm create projectofpankaj ```  
+
+Output  
+
+---
+
+|                          |                                                               |
+|--------------------------|---------------------------------------------------------------|
+| **Bench Url**            | http://projectofpankaj.localhost                              |
+| **Bench Root**           | /home/vboxuser/frappe/sites/projectofpankaj.localhost         |
+| **Frappe Username**      | administrator                                                 |
+| **Frappe Password**      | admin                                                         |
+| **Root DB User**         | root                                                          |
+| **Root DB Password**     | o_lA-+!+-esMtvl_G0u-W4%%D-+4%RB@                              |
+| **Root DB Host**         | global-db                                                     |
+| **DB Name**              | projectofpankaj-localhost                                     |
+| **DB User**              | projectofpankaj-localhost                                     |
+| **DB Password**          | bc9NKKpTC8Kj13sA                                              |
+| **Environment**          | dev                                                           |
+| **HTTPS**                | Not Enabled                                                   |
+| **Admin Tools**          |                                                               |
+| Mailhog                  | http://projectofpankaj.localhost/mailhog                      |
+| Adminer                  | http://projectofpankaj.localhost/adminer                      |
+| **Bench Apps**           |                                                               |
+| frappe                   | 15.36.0                                                       |
+| **Bench Services**       |                                                               |
+| frappe                   | ✓                                                             |
+| nginx                    | ✓                                                             |
+| redis-cache              | ✓                                                             |
+| redis-queue              | ✓                                                             |
+| redis-socketio           | ✓                                                             |
+| schedule                 | ✓                                                             |
+| socketio                 | ✓                                                             |
+| **Bench Workers**        |                                                               |
+| long-worker              | ✓                                                             |
+| short-worker             | ✓                                                             |
+| **Bench Admin Tools**    |                                                               |
+| adminer                  | ✓                                                             |
+| mailhog                  | ✓                                                             |
+
+---
